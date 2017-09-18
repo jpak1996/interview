@@ -1,0 +1,51 @@
+0 0
+0 0
+
+start:
+solve(matrix, [0,0] [])
+x=0
+y=0
+stack = [0,0]
+2 0
+0 0
+solve(matrix, [1,0], [0,0]) down
+solve(matrix, [0,1], [0,0]) right
+
+    down:
+    solve(matrix, [1,0], [0,0])
+    x=0
+    y=1
+    stack = [[0,0],[1,0]]
+    2 0
+    2 0
+    solve(matrix, [1,1], [[0,0],[1,0]]) right
+    RETURN min_path = [[0,0],[1,0],[1,1]]
+        
+        right:
+        solve(matrix, [1,1], [[0,0],[1,0]])
+        x=1
+        y=1
+        stack = [[0,0],[1,0],[1,1]]
+        2 0
+        2 2
+        RETURN [[0,0],[1,0],[1,1]]
+        
+    right:
+    solve(matrix, [0,1], [0,0])
+    x=1
+    y=0
+    stack =[[0,0],[0,1]]
+    2 2
+    0 0
+    solve(matrix, [1,1], [[0,0],[0,1]]) down
+    RETURN min_path = [[0,0],[0,1],[1,1]]
+    
+      down:
+      solve(matrix,[1,1], [[0,0],[0,1]])
+      x=1
+      y=1
+      stack = [[0,0],[0,1],[1,1]]
+      2 2
+      0 2
+      RETURN [[0,0],[0,1],[1,1]]
+    
