@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/intelliJ-java.iml" filepath="$PROJECT_DIR$/intelliJ-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/repeated_node.iml" filepath="$PROJECT_DIR$/repeated_node.iml" />
     </modules>
   </component>
 </project>
