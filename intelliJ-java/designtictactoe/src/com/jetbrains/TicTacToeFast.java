@@ -27,6 +27,7 @@ class TicTacToeFast {
 
     }
 
+
     /** Player {player} makes a move at ({row}, {col}).
      @param row The row of the board.
      @param col The column of the board.

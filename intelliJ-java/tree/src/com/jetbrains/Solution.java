@@ -1,7 +1,7 @@
 package com.jetbrains;
 
 public class Solution {
-    public boolean isAncestor(TreeNode descendant, TreeNode ancestor) {
+    public static boolean isAncestor(TreeNode descendant, TreeNode ancestor) {
         if(ancestor!=null) {
             if(ancestor==descendant) {
                 return true;
@@ -14,7 +14,7 @@ public class Solution {
             return false;
         }
     }
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
          while(true) {
              if( isAncestor(p, root.left) && isAncestor(q, root.left) ) {
                  root = root.left;

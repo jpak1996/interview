@@ -50,19 +50,34 @@ public class Main {
     }
     public static void main(String[] args) {
 	// write your code here
-        RandomListNode a = new RandomListNode(1);
-        RandomListNode b = new RandomListNode(2);
-        RandomListNode c = new RandomListNode(4);
-        a.next = b;
-        b.next = c;
-        RandomListNode a_copy = copy(a);
-        a.label = 4;
-        a.label = 5;
-        a.label = 6;
-        while(a_copy!=null) {
-            System.out.println(a_copy.label);
-            a_copy = a_copy.next;
+//        RandomListNode a = new RandomListNode(1);
+//        RandomListNode b = new RandomListNode(2);
+//        RandomListNode c = new RandomListNode(4);
+//        a.next = b;
+//        b.next = c;
+//        RandomListNode a_copy = copy(a);
+//        a.label = 4;
+//        a.label = 5;
+//        a.label = 6;
+//        while(a_copy!=null) {
+//            System.out.println(a_copy.label);
+//            a_copy = a_copy.next;
+//        }
+        Node head = new Node(1);
+        Node head1 = new Node(2);
+        Node head2 = new Node(3);
+
+        head.next = head1;
+        head1.next = head2;
+
+        Node head_copy = Node.copy(head);
+        head.val = 2;
+
+        while(head_copy!=null) {
+            System.out.println(head_copy.val);
+            head_copy = head_copy.next;
         }
+
 
     }
 }
